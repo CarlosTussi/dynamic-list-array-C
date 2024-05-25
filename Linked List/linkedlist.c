@@ -122,6 +122,7 @@
 
 	}
 
+	//Remove an element from the list if it exists
 	void removeElement(LList* head, int elem) {
 
 		//List not initialized
@@ -167,6 +168,30 @@
 						printf("[ERROR] - Element does not exist - Could not remove element\n");
 				}
 			}
+		}
+	}
+
+	//Destroy all the elements from the list
+	void destroyList(LList* head)
+	{
+		if (head != NULL)
+		{
+			if (head->head_node != NULL)
+			{
+				LNode* current = head->head_node;
+				LNode* temp = head->head_node;
+				while (current != NULL)
+				{
+					temp = current->next;	//Store next element for iteration
+					free(current);			//Deallocate current element
+					current = temp;	
+					
+				}
+			}
+
+			free(head);	//Deallocate the head wrapper
+			head = NULL;
+			printf("List destroyed!\n");
 		}
 	}
 

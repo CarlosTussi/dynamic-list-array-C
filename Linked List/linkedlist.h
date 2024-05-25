@@ -24,3 +24,4 @@ void removeElement(LList* head, int elem);
 void printList(LList* head);
 void searchElement(LList* head, int elem);
 void removeElement(LList* head, int elem);
+void destroyList(LList* head);

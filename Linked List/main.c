@@ -51,6 +51,19 @@ int main() {
 		removeElement(errorHead, 88);			//Trying to remove from unitialized list
 		removeElement(head, 1);					//Removing from empty list
 
+
+
+		//Inserting to destroy
+		printf("\n\n");
+		insertElement(head, 91);	 //Inserting on empty list
+		insertElement(head, 92);  //Inserting last element
+		insertElement(head, 93); //Inserting first element
+		insertElement(head, 94);  //Inserting in the middle
+
+		printList(head);
+		printf("Destroying list...\n");
+		destroyList(head);
+
 	}
 
 }
